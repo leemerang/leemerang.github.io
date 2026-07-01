@@ -2662,11 +2662,38 @@ input, select, textarea {
 	ul.contact {
 		list-style: none;
 		padding: 0;
+		display: flex;
 	}
+
+	ul.contact li:first-child {
+		padding: 0;
+	}
+
+	ul.contact a {
+		font-size: 1.5em;
+		transition: 1s;
+	}
+
+
+	ul.contact a:hover {
+		font-size: 2em;
+		transition: 1s;
+	}
+
+	ul.contact .icon {
+		transition: 1s;
+	}
+
+	ul.contact .icon:hover {
+		color:rgba(176, 176, 178, 0.8);
+		transition: 1s;
+	}
+
 
 		ul.contact li {
 			text-decoration: none;
-			margin: 0.5em 0 0 0;
+			font-size: 1.5em;
+			margin: 0 0 0 1em;
 			padding: 0 0 0 1em;
 			position: relative;
 		}
@@ -2685,30 +2712,15 @@ input, select, textarea {
 			}
 
 			ul.contact li:before {
-				border-radius: 100%;
-				border: solid 2px rgba(255, 255, 255, 0.125);
 				display: inline-block;
-				font-size: 0.8em;
+				font-size: 2em;
 				height: auto;
 				left: 0;
-				line-height: 2.35em;
 				position: absolute;
 				text-align: center;
 				top: 0;
 				width: auto;
 			}
-
-			ul.contact li:first-child {
-				margin-top: 0;
-			}
-
-		@media screen and (max-width: 736px) {
-
-			ul.contact li {
-				margin: 1.5em 0 0 0;
-			}
-
-		}
 
 /* Pagination */
 
@@ -3845,6 +3857,7 @@ input, select, textarea {
 
 		#footer .inner .contact {
 			width: calc(50% - 1.5em);
+			justify-content: center;
 		}
 
 		#footer .inner .copyright {
